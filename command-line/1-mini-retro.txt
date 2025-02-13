@@ -1,17 +1,17 @@
 Partner:
 
 What Went Well
----
+---Critical thinking, communitcation, problem solving all were good
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+--- Being more familiar with the codes and symbols
+* Focus: Was good and stayed on task
 
-* Communication:
+* Communication: Was great and ran questions by each other if we didnt know why something was happening
 
-* Pacing:
+* Pacing: Good pacing considering our knowledge level
 
-* Division of responsibility
+* Division of responsibility: We did well staying as our roles as driver and navigator
 
-* Code quality:
+* Code quality: Good we ran properly, could have been fewer steps but we learned more while making mistakes
