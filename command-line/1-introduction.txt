@@ -1,1 +1,57 @@
+Last login: Thu Feb 13 08:07:18 on console
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+grnq61-50:~ genti003$ pwd
+/Users/genti003
+grnq61-50:~ genti003$ ls
+Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		PycharmProjects
+grnq61-50:~ genti003$ cd D
+-bash: cd: D: No such file or directory
+grnq61-50:~ genti003$ cd Downloads
+grnq61-50:Downloads genti003$ pwd
+/Users/genti003/Downloads
+grnq61-50:Downloads genti003$ cd/home
+-bash: cd/home: No such file or directory
+grnq61-50:Downloads genti003$ cd/home/genti003
+-bash: cd/home/genti003: No such file or directory
+grnq61-50:Downloads genti003$ cd home
+-bash: cd: home: No such file or directory
+grnq61-50:Downloads genti003$ cd Home
+-bash: cd: Home: No such file or directory
+grnq61-50:Downloads genti003$ ls
+grnq61-50:Downloads genti003$ cd /home/genti003
+-bash: cd: /home/genti003: No such file or directory
+grnq61-50:Downloads genti003$ cd ~
+grnq61-50:~ genti003$ pwd
+/Users/genti003
+grnq61-50:~ genti003$ cd scienctifc-programming-(genti003)
+-bash: syntax error near unexpected token `('
+grnq61-50:~ genti003$ cd scientific-programming-genti003
+-bash: cd: scientific-programming-genti003: No such file or directory
+grnq61-50:~ genti003$ cd scientific-programming-gentii003
+-bash: cd: scientific-programming-gentii003: No such file or directory
+grnq61-50:~ genti003$ cd/home/scientific-programming-gentii003
+-bash: cd/home/scientific-programming-gentii003: No such file or directory
+grnq61-50:~ genti003$ cd Dowloads
+-bash: cd: Dowloads: No such file or directory
+grnq61-50:~ genti003$ cd Downloads
+grnq61-50:Downloads genti003$ ls -l
+total 0
+grnq61-50:Downloads genti003$ cd scientific-programming-(gentii003)
+-bash: syntax error near unexpected token `('
+grnq61-50:Downloads genti003$ cd scientific-programming-gentii003
+-bash: cd: scientific-programming-gentii003: No such file or directory
+grnq61-50:Downloads genti003$ ~
+-bash: /Users/genti003: is a directory
+grnq61-50:Downloads genti003$ cd ~
+grnq61-50:~ genti003$ cd /Volumes/Home/Student/g/genti003/scientific-programming-gentii003
+grnq61-50:scientific-programming-gentii003 genti003$ pwd
+/Volumes/Home/Student/g/genti003/scientific-programming-gentii003
+grnq61-50:scientific-programming-gentii003 genti003$ cd~
+-bash: cd~: command not found
+grnq61-50:scientific-programming-gentii003 genti003$ cd ~
+grnq61-50:~ genti003$ pwd
+/Users/genti003
+grnq61-50:~ genti003$
