@@ -1,19 +1,21 @@
 import numpy as np
 
-v_0 = 10  #m/s
-g = 9.8  #m/s^2
+initial_velocity = 10  #m/s
+gravitational_acceleration = 9.8  #m/s^2
 number_of_intervals = 10
 
-t_max = (2 * v_0/g)
-t_values = np.linspace(0,t_max,number_of_intervals + 1)
+maximum_time = 2 * initial_velocity / gravitational_acceleration
+times = np.linspace(0, maximum_time, number_of_intervals + 1)
 
-y=0
-i = 0
-while t <= t_max:
-    y(t) = v_0 * - 0.5 * g * t**2
-    print(f"{t:<10.2f}{y:<15.2f}")
+position = 0
+time = 0
+time_interval = (maximum_time - time)/number_of_intervals
 
-    i += 1
-    if i > number_of_intervals:
-        break
-        t += t_values[i]
+while time <= maximum_time:
+    position = initial_velocity * time - 0.5 * gravitational_acceleration * time ** 2
+    print(f"{time:<10.2f}{position:<15.2f}")
+    time += time_interval
+
+#for loop
+#pick 2 solid objects and compare time
+
