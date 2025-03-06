@@ -1,17 +1,18 @@
 Partner:
-
+Riley
 What Went Well
 ---
-
+communication
 
 What Would Make Next Time 1% Better
----
+--- my spelling
 * Focus:
-
+ good
 * Communication:
-
+great
 * Pacing:
-
+good
 * Division of responsibility
-
+great
 * Code quality:
+good

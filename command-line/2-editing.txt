@@ -1,1 +1,19 @@
+Last login: Tue Mar  4 07:54:21 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Mac619947:~ genti003$ touch example.txt
+Mac619947:~ genti003$ vi
+Mac619947:~ genti003$ vi example.txt
+Mac619947:~ genti003$ cat example.txt
+This is my first file created in the terminal.
+Mac619947:~ genti003$ touch shopping_list.txt
+Mac619947:~ genti003$ vi shopping_list.txt
+Mac619947:~ genti003$ cat shopping_list.txt
+apples milk bread coffee
+Mac619947:~ genti003$
+
+
+
 
