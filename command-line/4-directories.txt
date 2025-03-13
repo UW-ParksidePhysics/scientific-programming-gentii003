@@ -1,1 +1,37 @@
+Last login: Thu Mar 13 08:50:17 on console
+
+D134619971:~ genti003$ cd
+D134619971:~ genti003$ mkdir my_directory
+D134619971:~ genti003$ mkdir lesson4-practice
+D134619971:~ genti003$ cd documents
+D134619971:documents genti003$ mkdir lesson4-practice
+D134619971:documents genti003$ mkdir -p lesson4-practice/data/2025
+D134619971:documents genti003$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/data
+lesson4-practice/data/2025
+D134619971:documents genti003$ rmdir lesson4-practice/data/2025
+D134619971:documents genti003$ mkdir projects
+D134619971:documents genti003$ mkdir -p projects/frontend projects/backend projects/database
+D134619971:documents genti003$ find lesson4-practice
+lesson4-practice
+lesson4-practice/data
+D134619971:documents genti003$ find prijects
+find: prijects: No such file or directory
+D134619971:documents genti003$ find projects
+projects
+projects/database
+projects/frontend
+projects/backend
+D134619971:documents genti003$ 
+D134619971:documents genti003$ rm -projects
+rm: illegal option -- p
+usage: rm [-f | -i] [-dIPRrvWx] file ...
+       unlink [--] file
+D134619971:documents genti003$ rm -r projects
+D134619971:documents genti003$  ç
+
+
+
+
 
