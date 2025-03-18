@@ -1,17 +1,18 @@
-Partner:
+Partner: 
 
 What Went Well
 ---
-
+I dont have bash downloaded on my home laptop. I will fix it 
 
 What Would Make Next Time 1% Better
----
+--- understanding
 * Focus:
-
+good
 * Communication:
-
+good
 * Pacing:
-
+good
 * Division of responsibility
-
+good
 * Code quality:
+could be better 
