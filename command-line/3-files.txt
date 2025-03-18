@@ -1,1 +1,76 @@
+PS C:\Users\sophi> mkdir practice_directory
+
+
+    Directory: C:\Users\sophi
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/17/2025   7:12 PM                practice_directory
+
+
+PS C:\Users\sophi> mkdir shopping_list.txt
+
+
+    Directory: C:\Users\sophi
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/17/2025   7:13 PM                shopping_list.txt
+
+
+PS C:\Users\sophi> touch shopping_list.txt
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch shopping_list.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\sophi> mv shopping_list practice_directory/
+mv : Cannot find path 'C:\Users\sophi\shopping_list' because it does not exist.
+At line:1 char:1
++ mv shopping_list practice_directory/
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\sophi\shopping_list:String) [Move-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\sophi> cd
+PS C:\Users\sophi> cd practice_directory
+PS C:\Users\sophi\practice_directory> mkdir shopping_list.txt
+
+
+    Directory: C:\Users\sophi\practice_directory
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/17/2025   7:14 PM                shopping_list.txt
+
+
+PS C:\Users\sophi\practice_directory> touch shopping_list.txt
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch shopping_list.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\sophi\practice_directory> mv shopping_list.txt practice_directory/
+PS C:\Users\sophi\practice_directory> ls -R practice_directory
+PS C:\Users\sophi\practice_directory> rm -r practice_directory
+PS C:\Users\sophi\practice_directory>
+
+
+
+
+
+
+
+
+
+
 
