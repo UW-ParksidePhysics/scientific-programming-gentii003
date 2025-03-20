@@ -1,17 +1,18 @@
-Partner:
+Partner: Nate
 
 What Went Well
----
+--- problem solving communitcation
 
 
 What Would Make Next Time 1% Better
----
+--- practicing on ternimal more
 * Focus:
-
+good
 * Communication:
-
+good
 * Pacing:
-
+good
 * Division of responsibility
-
+good
 * Code quality:
+restarted a couple times
