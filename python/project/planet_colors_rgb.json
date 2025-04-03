@@ -1,0 +1,94 @@
+{
+    "Inner Planets and Dwarf Planets": {
+        "Mercury": {
+            "description": "Dark gray, rocky",
+            "rgb": [
+                105,
+                105,
+                105
+            ]
+        },
+        "Venus": {
+            "description": "Pale yellow/white (cloud cover)",
+            "rgb": [
+                238,
+                232,
+                170
+            ]
+        },
+        "Earth": {
+            "description": "Blue (oceans), green/brown (land), white (clouds)",
+            "rgb": [
+                0,
+                102,
+                204
+            ]
+        },
+        "Moon": {
+            "description": "Light gray, dusty",
+            "rgb": [
+                169,
+                169,
+                169
+            ]
+        },
+        "Mars": {
+            "description": "Reddish-brown (iron oxide)",
+            "rgb": [
+                188,
+                39,
+                50
+            ]
+        },
+        "Ceres": {
+            "description": "Dark grayish-brown",
+            "rgb": [
+                133,
+                123,
+                112
+            ]
+        },
+        "Pluto": {
+            "description": "Pale tan with reddish/brown patches",
+            "rgb": [
+                186,
+                132,
+                106
+            ]
+        }
+    },
+    "Outer Planets (Gas and Ice Giants)": {
+        "Jupiter": {
+            "description": "Orange, beige, and white bands",
+            "rgb": [
+                216,
+                165,
+                113
+            ]
+        },
+        "Saturn": {
+            "description": "Pale gold/beige",
+            "rgb": [
+                210,
+                180,
+                140
+            ]
+        },
+        "Uranus": {
+            "description": "Pale cyan/blue-green (methane)",
+            "rgb": [
+                173,
+                216,
+                230
+            ]
+        },
+        "Neptune": {
+            "description": "Deep azure blue",
+            "rgb": [
+                28,
+                82,
+                138
+            ]
+        }
+    }
+}
