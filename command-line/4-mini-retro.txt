@@ -1,17 +1,18 @@
-Partner:
+Partner: Carter
 
 What Went Well
 ---
-
+We completed it quickly and smoothing using good communication.
 
 What Would Make Next Time 1% Better
----
+--- spelling
 * Focus:
-
+good 
 * Communication:
-
+great
 * Pacing:
-
+smooth
 * Division of responsibility
-
+great
 * Code quality:
+pretty good
