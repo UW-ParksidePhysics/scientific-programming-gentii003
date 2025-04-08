@@ -1,2 +1,5 @@
 # Concepts
+* function
+* condition
+* tuple
 * 
