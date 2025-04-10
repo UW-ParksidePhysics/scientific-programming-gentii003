@@ -1,4 +1,4 @@
-#### RENAME from project.py to (your_project_short_name).py
+#### RENAME from orbital icons.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words
 # 2. Module imports that are used in multiple functions
@@ -25,3 +25,9 @@
 #		data read-in
 #		simulation solution 
 #		visualization
+import vpython as vp
+from vpython import *
+import numpy as np
+import matplot.lib
+
+
