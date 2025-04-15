@@ -25,9 +25,87 @@
 #		data read-in
 #		simulation solution 
 #		visualization
-import vpython as vp
-from vpython import *
+
+"""docstring statement"""
+
+
+
 import numpy as np
-import matplot.lib
+import matplotlib.pyplot as plt
+
+def draw_sun():
+    sun = plt.Circle((1, 1), radius=0.25, color='yellow', fill=False)
+
+    fig, ax = plt.subplots(1)
+
+    ax.add_patch(sun)
+
+    ax.set_aspect('equal', adjustable='box')
+
+    ax.set_xlim([-5, 5])
+    ax.set_ylim([-5, 5])
+
+    print(sun)
+    plt.show()
+
+
+
+def draw_orbit():
+
+    a = 10
+    b = 5
+    center_x = 0
+    center_y = 0
+
+    #points for the ellipse
+    t = np.linspace(0, 2 * np.pi, 100)
+    x = a * np.cos(t) + center_x
+    y = b * np.sin(t) + center_y
+
+    # Plot the orbit
+    plt.figure(figsize=(8, 6))
+    plt.plot(x, y, label='Orbit')
+
+
+    plt.scatter(center_x, center_y, marker='+', label='Center')
+
+    #plt.xlabel('X-axis')
+    #plt.ylabel('Y-axis')
+    #plt.title('Elliptical Orbit')
+
+    #plt.legend()
+    #plt.gca().set_aspect('equal', adjustable='box')
+    #plt.grid(True)
+    #plt.show()
+
+
+def draw_guidlines():
+    pass
+
+
+def label_icon():
+    pass
+
+
+def draw_angle_arc():
+    pass
+
+
+def draw_object():
+    pass
+
+
+def semimajor_axis():
+    pass
+
+
+if __name__ == '__main__':
+    circle = plt.Circle((1, 1), radius=0.25, color='yellow', fill=False)
+    fig, ax = plt.subplots(circle)
+    ax.add_patch(circle)
+
+
+plt.show()
+
 
 
