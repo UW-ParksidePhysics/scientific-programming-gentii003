@@ -25,3 +25,42 @@
 #		data read-in
 #		simulation solution 
 #		visualization
+#In this code I am creating a visual representation of orbiting icons in our solar system.
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Set up the figure and axis
+fig, ax = plt.subplots()
+
+# Parameters
+circle_radius = .5
+ellipse_a = 2  # semi-major axis
+ellipse_b = 1  # semi-minor axis
+
+# Angle values
+theta = np.linspace(0, 2 * np.pi, 300)
+
+# Circle coordinates
+circle_x = circle_radius * np.cos(theta)
+circle_y = circle_radius * np.sin(theta)
+
+# Ellipse coordinates
+ellipse_x = ellipse_a * np.cos(theta)
+ellipse_y = ellipse_b * np.sin(theta)
+
+# Plot the yellow circle
+ax.plot(circle_x, circle_y, color='yellow', linewidth=2)
+ax.fill(circle_x, circle_y, color='yellow', alpha=0.6)
+
+# Plot the ellipse
+ax.plot(ellipse_x, ellipse_y, color='blue', linewidth=2)
+
+# Formatting
+ax.set_aspect('equal')
+ax.set_xlim(-ellipse_a - 0.5, ellipse_a + 0.5)
+ax.set_ylim(-ellipse_b - 0.5, ellipse_b + 0.5)
+
+
+# Show the plot
+plt.show()
