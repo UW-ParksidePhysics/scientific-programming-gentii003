@@ -1,0 +1,288 @@
+Last login: Thu Apr 24 08:13:08 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c -lm
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c -ls
+VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Jul 19 2024 23:44:05)
+Argument missing after: "-ls"
+More info with: "vim -h"
+Mac619947:~ genti003$ ls calculate_pythagorean_triple.c 
+calculate_pythagorean_triple.c
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ wc -1
+wc: illegal option -- 1
+usage: wc [-Lclmw] [file ...]
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c -lm
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c -ls
+VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Jul 19 2024 23:44:05)
+Argument missing after: "-ls"
+More info with: "vim -h"
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ cd
+Mac619947:~ genti003$ cd ~documents
+-bash: cd: ~documents: No such file or directory
+Mac619947:~ genti003$ cd calculate_pythagorean_triple.c
+-bash: cd: calculate_pythagorean_triple.c: Not a directory
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c -lm
+Mac619947:~ genti003$ -ls
+-bash: -ls: command not found
+Mac619947:~ genti003$ ls
+Desktop				Public
+Documents			PycharmProjects
+Downloads			a.out
+Library				calculate_pythagorean_triple.c
+Movies				example.txt
+Music				shopping_list.txt
+Pictures
+Mac619947:~ genti003$ ls -l
+total 48
+drwx------+  8 genti003  UWP\Domain Users   256 Feb 25 08:28 Desktop
+drwx------+  3 genti003  UWP\Domain Users    96 Feb 20  2024 Documents
+drwx------+  3 genti003  UWP\Domain Users    96 Feb 20  2024 Downloads
+drwx------@ 85 genti003  UWP\Domain Users  2720 Feb  6 09:05 Library
+drwx------+  4 genti003  UWP\Domain Users   128 Feb  4 08:06 Movies
+drwx------+  4 genti003  UWP\Domain Users   128 Feb 11 08:09 Music
+drwx------+  4 genti003  UWP\Domain Users   128 Feb  4 07:57 Pictures
+drwxr-xr-x+  4 genti003  UWP\Domain Users   128 Feb 20  2024 Public
+drwxr-xr-x@  3 genti003  UWP\Domain Users    96 Feb  6 09:06 PycharmProjects
+-rwxr-xr-x   1 genti003  UWP\Domain Users  8480 Apr 24 08:38 a.out
+-rw-r--r--   1 genti003  UWP\Domain Users   469 Apr 24 08:38 calculate_pythagorean_triple.c
+-rw-r--r--@  1 genti003  UWP\Domain Users    47 Mar  6 09:06 example.txt
+-rw-r--r--@  1 genti003  UWP\Domain Users    25 Mar  6 09:08 shopping_list.txt
+Mac619947:~ genti003$ ./a.out
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+Mac619947:~ genti003$ wc -l
+           
+
+
+  
+
+
+
+:wq                     
+y u no work
+^[:wq       
+^C
+Mac619947:~ genti003$ ./a.out | wc -l
+      20
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c -lm -o triples.x
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ ./triple.x 5
+-bash: ./triple.x: No such file or directory
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c
+Mac619947:~ genti003$ ./triple.x 5
+-bash: ./triple.x: No such file or directory
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c./triple.x 5
+clang: error: no such file or directory: 'calculate_pythagorean_triple.c./triple.x'
+clang: error: no such file or directory: '5'
+clang: error: no input files
+Mac619947:~ genti003$ cc calculate_pythagorean_triple.c -lm -o triple.x 
+Mac619947:~ genti003$ ./triple.x 5
+   3   4   5
+Mac619947:~ genti003$ vi 
+Mac619947:~ genti003$ vi calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ vi calculate_pythagorean_triples.f90
+Mac619947:~ genti003$ vi hypotenuse.f90
+Mac619947:~ genti003$ mv hypotenuse.f90 hypotenuse.c
+Mac619947:~ genti003$ cc -c hypotenuse.c 
+Mac619947:~ genti003$ ls
+Desktop				a.out
+Documents			calculate_pythagorean_triple.c
+Downloads			example.txt
+Library				hypotenuse.c
+Movies				hypotenuse.o
+Music				shopping_list.txt
+Pictures			triple.x
+Public				triples.x
+PycharmProjects
+Mac619947:~ genti003$ call hypotenuse(a,b,c)
+-bash: syntax error near unexpected token `('
+Mac619947:~ genti003$ cc hypotenuse.o -o triples_ c.x
+clang: error: no such file or directory: 'c.x'
+Mac619947:~ genti003$ cc hypotenuse.o -o triples_ c.x -lm
+clang: error: no such file or directory: 'c.x'
+Mac619947:~ genti003$ cc hypotenuse.o -o triples_c.x -lm
+Undefined symbols for architecture x86_64:
+  "_main", referenced from:
+      <initial-undefines>
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Mac619947:~ genti003$ cc hypotenuse.c -o triples_c.x -lm
+Undefined symbols for architecture x86_64:
+  "_main", referenced from:
+      <initial-undefines>
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Mac619947:~ genti003$ cc hypotenuse.o calculate_pythagorean_triple.o -o triples_ c.x -lm
+clang: error: no such file or directory: 'calculate_pythagorean_triple.o'
+clang: error: no such file or directory: 'c.x'
+Mac619947:~ genti003$ history
+    1  pwd
+    2  ls
+    3  cd D
+    4  cd Downloads
+    5  pwd
+    6  cd/home
+    7  cd/home/genti003
+    8  cd home
+    9  cd Home
+   10  ls
+   11  cd /home/genti003
+   12  cd ~
+   13  pwd
+   14  cd scienctifc-programming-(genti003)
+   15  cd scientific-programming-genti003
+   16  cd scientific-programming-gentii003
+   17  cd/home/scientific-programming-gentii003
+   18  cd Dowloads
+   19  cd Downloads
+   20  ls -l
+   21  cd scientific-programming-(gentii003)
+   22  cd scientific-programming-gentii003
+   23  ~
+   24  cd ~
+   25  cd /Volumes/Home/Student/g/genti003/scientific-programming-gentii003
+   26  pwd
+   27  cd~
+   28  cd ~
+   29* ./a.
+   30  touch example.txt
+   31  vi
+   32  vi example.txt
+   33  cat example.txt
+   34  touch shopping_list.txt
+   35  vi shopping_list.txt
+   36  cat shopping_list.txt
+   37  int main()
+   38  {     int a, b;     double c;     int maximum_c = 50;     double epsilon = 1e-3;     for (a = 1; a < maximum_c; a++) {
+   39          for (b = a; b < maximum_c; b++) {
+   40              c = sqrt(pow((double)a, 2) + pow((double)b, 2));
+   41              if ( (c <= (double)(maximum_c) ) &&
+   42                   (c - floor(c) < epsilon ) ) {
+   43                 printf("%4d%4d%4d\n", a, b, (int)c);
+   44              }
+   45          }
+   46      }
+   47      return 0;
+   48  vi. calculate_pythagorean_triple.c.txt
+   49  vi calculate_pythagorean_triple.c.txt
+   50  vi calculate_pythagorean_triple.c
+   51  cc calculate_pythagorean_triple.c
+   52  vi calculate_pythagorean_triple.c
+   53  cc calculate_pythagorean_triple.c -lm
+   54  vi calculate_pythagorean_triple.c
+   55  vi calculate_pythagorean_triple.c -ls
+   56  ls calculate_pythagorean_triple.c 
+   57  cc calculate_pythagorean_triple.c 
+   58  wc -1
+   59  cc calculate_pythagorean_triple.c -lm
+   60  vi calculate_pythagorean_triple.c -ls
+   61  vi calculate_pythagorean_triple.c 
+   62  cd
+   63  cd ~documents
+   64  cd calculate_pythagorean_triple.c
+   65  vi calculate_pythagorean_triple.c 
+   66  cc calculate_pythagorean_triple.c
+   67  cc calculate_pythagorean_triple.c
+   68  vi calculate_pythagorean_triple.c 
+   69  cc calculate_pythagorean_triple.c -lm
+   70  -ls
+   71  ls
+   72  ls -l
+   73  ./a.out
+   74  wc -l
+   75  ./a.out | wc -l
+   76  cc calculate_pythagorean_triple.c -lm -o triples.x
+   77  vi calculate_pythagorean_triple.c 
+   78  ./triple.x 5
+   79  vi calculate_pythagorean_triple.c 
+   80  vi calculate_pythagorean_triple.c 
+   81  cc calculate_pythagorean_triple.c
+   82  ./triple.x 5
+   83  cc calculate_pythagorean_triple.c./triple.x 5
+   84  cc calculate_pythagorean_triple.c -lm -o triple.x 
+   85  ./triple.x 5
+   86  vi 
+   87  vi calculate_pythagorean_triple.c 
+   88  vi calculate_pythagorean_triples.f90
+   89  vi hypotenuse.f90
+   90  mv hypotenuse.f90 hypotenuse.c
+   91  cc -c hypotenuse.c 
+   92  ls
+   93  call hypotenuse(a,b,c)
+   94  cc hypotenuse.o -o triples_ c.x
+   95  cc hypotenuse.o -o triples_ c.x -lm
+   96* cc hypotenuse.o  -o triples_c.x -lm
+   97* cc 
+   98  cc hypotenuse.o calculate_pythagorean_triple.o -o triples_ c.x -lm
+   99  history
+Mac619947:~ genti003$ cc -c calculate_pythagorean_triple.c 
+Mac619947:~ genti003$ cc hypotenuse.o calculate_pythagorean_triple.o -o triples_c.x -lm
+Mac619947:~ genti003$ ls
+Desktop				calculate_pythagorean_triple.c
+Documents			calculate_pythagorean_triple.o
+Downloads			example.txt
+Library				hypotenuse.c
+Movies				hypotenuse.o
+Music				shopping_list.txt
+Pictures			triple.x
+Public				triples.x
+PycharmProjects			triples_c.x
+a.out
+Mac619947:~ genti003$  triples_ c.x -lm
+-bash: triples_: command not found
+Mac619947:~ genti003$ ./triples_c.x 
+   3   4   5
+   5  12  13
+   6   8  10
+   7  24  25
+   8  15  17
+   9  12  15
+   9  40  41
+  10  24  26
+  12  16  20
+  12  35  37
+  14  48  50
+  15  20  25
+  15  36  39
+  16  30  34
+  18  24  30
+  20  21  29
+  21  28  35
+  24  32  40
+  27  36  45
+  30  40  50
+Mac619947:~ genti003$ ./triples_c.x  5
+   3   4   5
+Mac619947:~ genti003$
