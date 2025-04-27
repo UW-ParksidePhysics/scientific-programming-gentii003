@@ -1,1 +1,49 @@
+sophi@MSI MINGW64 ~
+$ vi test.py
+
+sophi@MSI MINGW64 ~
+$ :%/quanity/result/g
+bash: :%/quanity/result/g: No such file or directory
+
+sophi@MSI MINGW64 ~
+$ cat test.py
+def simple_function():
+    quantity = 5 * 7
+    print("The quantity is:", quantity)
+
+if __name__ == '__main__':
+    simple_function()
+
+
+
+sophi@MSI MINGW64 ~
+$ python3 test.py
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+sophi@MSI MINGW64 ~
+$ vi test.py
+
+sophi@MSI MINGW64 ~
+$ cat test.py
+def simple_function():
+    quantity = 4 * 7
+    print("The quantity is:", quantity)
+
+if __name__ == '__main__':
+    simple_function()
+
+
+
+sophi@MSI MINGW64 ~
+$ python test.py
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+sophi@MSI MINGW64 ~
+$ ^C
+
+sophi@MSI MINGW64 ~
+$
+
+
+
 
