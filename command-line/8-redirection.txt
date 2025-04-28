@@ -1,1 +1,27 @@
-
+D134619966:~ genti003$ touch greeting.txt
+D134619966:~ genti003$ echo " welcome to lesson 8!" > greeting.txt
+-bash: !": event not found
+D134619966:~ genti003$ echo "hello"
+hello
+D134619966:~ genti003$ echo "welcome to lesson 8!" > greeting.txt
+-bash: !": event not found
+D134619966:~ genti003$ echo "welcom to lesson 8" > greeting.txt
+D134619966:~ genti003$ echo "Lets learn about redirection" >> greeting.txt
+D134619966:~ genti003$ cat greeting.txt
+welcom to lesson 8
+Lets learn about redirection
+D134619966:~ genti003$ rm greeting.txt
+D134619966:~ genti003$ echo "File 1" > lists.txt 
+D134619966:~ genti003$ echo "File 1" >> lists.txt 
+D134619966:~ genti003$ echo "File 2" >> lists.txt 
+D134619966:~ genti003$ rm lists.txt
+D134619966:~ genti003$ 
+MAC619967:~ eisne003$ echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." > data.txt
+MAC619967:~ eisne003$ cat data.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+MAC619967:~ eisne003$ wc -w data.txt > word_count.txt
+MAC619967:~ eisne003$ cat word_count.txt 
+      69 data.txt
+MAC619967:~ eisne003$ ls > directory_list.txt
+MAC619967:~ eisne003$ date >> directory_list.txt 
+MAC619967:~ eisne003$ rm data.txt word_count.txt directory_list.txt 

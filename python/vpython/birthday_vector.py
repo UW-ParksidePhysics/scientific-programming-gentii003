@@ -1,4 +1,5 @@
 from vpython import *
+import vpython as vp
 # GlowScript 3.0 VPython
 
 # Written by Ruth Chabay, licensed under Creative Commons 4.0.

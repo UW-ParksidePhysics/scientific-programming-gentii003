@@ -25,8 +25,8 @@ def plot_orbit():
     ax.add_patch(orbit)
 
     # Earth's horizon line
-    x_vals = np.linspace(-3, 3, 500)
-    ax.plot(x_vals, np.zeros_like(x_vals), color='black', linestyle='--', linewidth=1.5, label="Earth's Horizon")
+    x_values = np.linspace(-3, 3, 500)
+    ax.plot(x_values, np.zeros_like(x_values), color='black', linestyle='--', linewidth=1.5, label="Earth's Horizon")
 
     # Calculate a point on the tilted ellipse
     angle = np.pi / 4
@@ -39,7 +39,7 @@ def plot_orbit():
     planet = Circle((x_orbit, y_orbit), 0.1, color='black', zorder=3)
     ax.add_patch(planet)
 
-    # Plot settings
+    #plot settings
     ax.set_xlim(-3, 3)
     ax.set_ylim(-2, 2)
     ax.set_aspect('equal')
