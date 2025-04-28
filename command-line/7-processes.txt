@@ -1,1 +1,78 @@
+ ping google.com
+
+Pinging google.com [2607:f8b0:4009:81a::200e] with 32 bytes of data:
+Reply from 2607:f8b0:4009:81a::200e: time=18ms
+Reply from 2607:f8b0:4009:81a::200e: time=15ms
+Reply from 2607:f8b0:4009:81a::200e: time=16ms
+Reply from 2607:f8b0:4009:81a::200e: time=15ms
+
+Ping statistics for 2607:f8b0:4009:81a::200e:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 15ms, Maximum = 18ms, Average = 16ms
+
+sophi@MSI MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1033    1008    1033      46608  pty0      197609 17:55:05 /usr/bin/ps
+     1007       1    1007      38044  ?         197609 19:03:13 /usr/bin/mintty
+     1008    1007    1008      19388  pty0      197609 19:03:13 /usr/bin/bash
+
+sophi@MSI MINGW64 ~
+$ kill
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+
+sophi@MSI MINGW64 ~
+$ top
+bash: top: command not found
+
+sophi@MSI MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1044    1008    1044      40264  pty0      197609 17:55:34 /usr/bin/ps
+     1007       1    1007      38044  ?         197609 19:03:13 /usr/bin/mintty
+     1008    1007    1008      19388  pty0      197609 19:03:13 /usr/bin/bash
+
+sophi@MSI MINGW64 ~
+$ top
+bash: top: command not found
+
+sophi@MSI MINGW64 ~
+$ jobs
+
+sophi@MSI MINGW64 ~
+$ kill
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+
+sophi@MSI MINGW64 ~
+$ ping google.com
+
+Pinging google.com [2607:f8b0:4009:814::200e] with 32 bytes of data:
+Reply from 2607:f8b0:4009:814::200e: time=20ms
+Reply from 2607:f8b0:4009:814::200e: time=17ms
+Reply from 2607:f8b0:4009:814::200e: time=16ms
+Reply from 2607:f8b0:4009:814::200e: time=17ms
+
+Ping statistics for 2607:f8b0:4009:814::200e:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 16ms, Maximum = 20ms, Average = 17ms
+
+sophi@MSI MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1062    1008    1062      19568  pty0      197609 17:57:24 /usr/bin/ps
+     1007       1    1007      38044  ?         197609 19:03:13 /usr/bin/mintty
+     1008    1007    1008      19388  pty0      197609 19:03:13 /usr/bin/bash
+
+sophi@MSI MINGW64 ~
+$ kill [PID]
+bash: kill: [PID]: arguments must be process or job IDs
+
+sophi@MSI MINGW64 ~
+$ top
+bash: top: command not found
+
+sophi@MSI MINGW64 ~
+$
 

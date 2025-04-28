@@ -1,17 +1,17 @@
-Partner:
+Partner: me
 
 What Went Well
----
+--- learned more about command line
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+--- being on time
+* Focus: good
 
-* Communication:
+* Communication: good
 
-* Pacing:
+* Pacing:good
 
-* Division of responsibility
+* Division of responsibility:good
 
-* Code quality:
+* Code quality:okay couldnt run the code through python
