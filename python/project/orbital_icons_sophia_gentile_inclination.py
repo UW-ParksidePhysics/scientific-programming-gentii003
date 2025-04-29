@@ -1,8 +1,43 @@
+#### RENAME from project.py to (your_project_short_name).py
+# File structure
+# 1. Commented paragraph describing project ~ 100-200 words
+# 2. Module imports that are used in multiple functions
+# 3. Function definitions
+# 4. if __name__ == "__main__" block, which calls a primary function with a clear name
+
+# All code is inside function definitions for simulation solution & visualization (functional programming)
+#	Each function contains a docstring compliant with PEP 257: https://www.python.org/dev/peps/pep-0257/
+#	Module ends with if __name__ == "__main__" block to execute central function of the code
+
+# Primary simulation function structure
+#	1. Module imports
+#		Use SciPy constants for physical constants in particular function (not globally)
+#			https://docs.scipy.org/doc/scipy/reference/constants.html
+#		Follow best practice order:
+#			https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module
+# 	2. Simulation parameters
+#		Each parameter named clearly and units marked in in-line comment
+#		Naming of all variables should comply with PEP 8:
+#			https://www.python.org/dev/peps/pep-0008/#documentation-strings
+#			(lower_case_with_underscores)
+# 	3. Computed parameters (from simulation parameters)
+# 	4. Function calls (use PEP 8-compliant lower_case_with_underscores) and simple calculations for:
+#		data read-in
+#		simulation solution
+#		visualization
+#In this code I am creating a visual representation of orbiting icons in our solar system. With the help of multiple import functions and other defining functions
+#I was able to draw the sun as well as the inclination line for each planets orbit with respect to Earths orbit. I also
+# used a dictionary of symbols and data to impliment into my code for multiple inclinations to call back on.
+#The planets are astronomical symbols to properly represent each planet as well as Ceres and pluto. This project
+#has taught the capabilities of coding as well as furthered my knowledge of the planets. With this visualization I
+#hope to represent the planets different inclinations throughout or solar system. It's very easy to view the solar system as a flat system
+# was to help show that is it not though some inclinations are very small each one is still unique.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse, Circle, Arc
 
-# --------- Astronomical Symbols Dictionary ---------
+
 astronomical_symbols = dict(
     Sun='☉',
     Moon='☽',
@@ -18,10 +53,10 @@ astronomical_symbols = dict(
     Ceres='⚳'
 )
 
-# --------- Functions ---------
+# Functions
 
 def draw_sun(axis, center=(0, 0), radius=0.25):
-    sun = Circle(center, radius=radius, color='yellow', fill=True)
+    sun = Circle(center, radius=radius, color='white', fill=True)
     axis.add_patch(sun)
     axis.text(center[0], center[1], astronomical_symbols['Sun'],
               ha='center', va='center', fontsize=16, color='black')
@@ -32,7 +67,7 @@ def draw_orbit(axis, semi_major, semi_minor, orbit_center, inclination_deg):
     axis.add_patch(ellipse)
 
 def draw_guidelines(axis, y_level=0):
-    axis.axhline(y=y_level, color='blue', linestyle='--', linewidth=1.5, label="Earth's Orbit")
+    axis.axhline(y=y_level, color='black', linestyle='--', linewidth=1.5, label="Earth's Orbit")
 
 def label_icon(axis):
     axis.text(0, 0.3, "Sun", ha='center', fontsize=10, color='black')
@@ -65,17 +100,24 @@ def place_planet_symbol(axis, semi_major, semi_minor, orbit_center, inclination_
     return (x, y)
 
 def draw_radius_line(axis, inclination_deg, length=5, sun_position=(0, 0)):
+    """
+    Draw a full radius line through the Sun at the inclination angle.
+    """
     θ = np.deg2rad(inclination_deg)
     x_end = sun_position[0] + length * np.cos(θ)
     y_end = sun_position[1] + length * np.sin(θ)
 
+    x_start = sun_position[0] - length * np.cos(θ)
+    y_start = sun_position[1] - length * np.sin(θ)
+
     axis.plot(
-        [sun_position[0], x_end],
-        [sun_position[1], y_end],
-        color='black', linestyle='-', linewidth=2, label='Inclination'
+        [x_start, x_end],
+        [y_start, y_end],
+        color='black', linestyle='-', linewidth=2, label='Inclination Radius'
     )
 
-# --------- Planet Data ---------
+
+
 
 planets_data = {
     'Mercury': {'inclination': 7.0,  't': 0,           'symbol': astronomical_symbols['Mercury'], 'color': 'black'},
@@ -87,11 +129,9 @@ planets_data = {
     'Uranus':  {'inclination': 1,  't': np.pi/8,     'symbol': astronomical_symbols['Uranus'],  'color': 'black'},
     'Neptune': {'inclination': 2,  't': np.pi/9,     'symbol': astronomical_symbols['Neptune'], 'color': 'black'},
     'Ceres':   {'inclination': 11, 't': np.pi/7,     'symbol': astronomical_symbols['Ceres'],   'color': 'black'},
+    'Pluto':   {'inclination': 17.2, 't': np.pi/10,    'symbol': astronomical_symbols['Pluto'], 'color': 'black'},
 }
 
-# ------------------------------
-# MAIN PROGRAM
-# ------------------------------
 
 if __name__ == '__main__':
     semi_major = 4
@@ -129,5 +169,6 @@ if __name__ == '__main__':
         draw_inclination_arc(axis, inclination, radius=semi_major)
         setup_axes(axis)
 
-        plt.title(f"Visualization of Inclination with {chosen_planet} {symbol} and Radius Line")
+        plt.title(f"Visualization of Inclination with {chosen_planet} {symbol}")
         plt.show()
+
