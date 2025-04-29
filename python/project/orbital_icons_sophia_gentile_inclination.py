@@ -59,7 +59,7 @@ def draw_sun(axis, center=(0, 0), radius=0.25):
     sun = Circle(center, radius=radius, color='white', fill=True)
     axis.add_patch(sun)
     axis.text(center[0], center[1], astronomical_symbols['Sun'],
-              ha='center', va='center', fontsize=16, color='black')
+              ha='center', va='center', fontsize=36, color='black')
 
 def draw_orbit(axis, semi_major, semi_minor, orbit_center, inclination_deg):
     ellipse = Ellipse(xy=orbit_center, width=2*semi_major, height=2*semi_minor,
@@ -70,7 +70,7 @@ def draw_guidelines(axis, y_level=0):
     axis.axhline(y=y_level, color='black', linestyle='--', linewidth=1.5, label="Earth's Orbit")
 
 def label_icon(axis):
-    axis.text(0, 0.3, "Sun", ha='center', fontsize=10, color='black')
+    axis.text(0, 0.3, "Sun", ha='center', fontsize=1, color='black')
 
 def setup_axes(axis):
     axis.set_aspect('equal', adjustable='box')
@@ -88,14 +88,14 @@ def draw_inclination_arc(axis, angle_deg, center=(0,0), radius=1.5):
     x = (radius + 0.4) * np.cos(label_angle_rad)
     y = (radius + 0.4) * np.sin(label_angle_rad)
 
-    axis.text(x, y, f"{angle_deg}°", ha='center', va='center', fontsize=10, color='red')
+    axis.text(x, y, f"{angle_deg}°", ha='center', va='center', fontsize=12, color='red')
 
 def place_planet_symbol(axis, semi_major, semi_minor, orbit_center, inclination_deg, t, symbol, color='red'):
     θ = np.deg2rad(inclination_deg)
     x = semi_major * np.cos(t) * np.cos(θ) - semi_minor * np.sin(t) * np.sin(θ) + orbit_center[0]
     y = semi_major * np.cos(t) * np.sin(θ) + semi_minor * np.sin(t) * np.cos(θ) + orbit_center[1]
 
-    axis.text(x, y, symbol, fontsize=14, ha='center', va='center', color=color)
+    axis.text(x, y, symbol, fontsize=26, ha='center', va='center', color=color)
 
     return (x, y)
 
@@ -129,7 +129,7 @@ planets_data = {
     'Uranus':  {'inclination': 1,  't': np.pi/8,     'symbol': astronomical_symbols['Uranus'],  'color': 'black'},
     'Neptune': {'inclination': 2,  't': np.pi/9,     'symbol': astronomical_symbols['Neptune'], 'color': 'black'},
     'Ceres':   {'inclination': 11, 't': np.pi/7,     'symbol': astronomical_symbols['Ceres'],   'color': 'black'},
-    'Pluto':   {'inclination': 17.2, 't': np.pi/10,    'symbol': astronomical_symbols['Pluto'], 'color': 'black'},
+    'Pluto':   {'inclination': 17, 't': np.pi/10,    'symbol': astronomical_symbols['Pluto'], 'color': 'black'},
 }
 
 
