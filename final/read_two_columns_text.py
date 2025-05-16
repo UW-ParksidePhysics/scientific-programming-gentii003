@@ -11,7 +11,7 @@ def read_columns(filename):
 
 if __name__ == '__main__':
     try:
-        data = read_columns('volumes_energies.dat')
+        data = read_columns('ag.FM-3m.GGA-PBE')
         print(f'{data=},\n Shape={data.shape}')
     except OSError:
         print('File not found or error reading file')
