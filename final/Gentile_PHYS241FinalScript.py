@@ -17,6 +17,10 @@ __author__ = 'Sophia Gentile'
 
 import numpy as np
 import matplotlib.pyplot as plt
+
+from calculate_lowest_eigenvector import calculate_lowest_eigenvectors
+from generate_matrix import generate_matrix
+from python.matrices.eigenvectors import eigenvalues
 from read_two_columns_text import read_columns
 from calaculate_bivariate_statistics import calculate_bivariate_statistics
 from calculate_quadratic_fit import calculate_quadratic_fit
@@ -127,10 +131,47 @@ if __name__ == "__main__":
     today_str = date.today().isoformat()
     fig.text(0.01, 0.01, f"Created by Sophia Gentile {today_str}", ha='left', fontsize=8)
 
+
+    #part 2
+    dimension_number = 90
+    length_scale = 1
+    minimum_x = -10
+    maximum_x = 10
+    parameter = 4
+    potential_names = 'sinusoidal'
+
+    total_matrix = generate_matrix(minimum_x,maximum_x,dimension_number,length_scale,potential_names)
+    print(total_matrix)
+
+    eigenvalues, eigenvectors = calculate_lowest_eigenvectors(total_matrix, 3)
+    print(f"Eigenvalues: {eigenvalues}")
+    x = np.linspace(minimum_x, maximum_x, dimension_number)
+
+    # Plot eigenvectors
+    fig, ax = plt.subplots(figsize=(10, 6))
+    colors = ['tab:blue', 'tab:orange', 'tab:green']
+
+    for i, vec in enumerate(eigenvectors):
+        if vec[np.argmax(np.abs(vec))] < 0:
+            vec = -vec
+        vec /= np.linalg.norm(vec)
+        ax.plot(x, vec, color=colors[i], label=fr"$\psi_{{{i}}} \ E{{{i}}} = {eigenvalues[i]}$")
+
+
+    ax.set_xlabel("x [a.u.]")
+    ax.set_ylabel(r"$\psi_n(x)$ [a.u.]")
+    ax.axhline(0, color='black', linewidth=1)
+    ax.set_title("Eigenvectors in a Sinusoidal Potential")
+    ax.legend()
+    fig.text(0.01, 0.01, f"Created by Sophia Gentile {today_str}", ha='left', fontsize=8)
+    plt.title(f"Select Wavefunction for{potential_names} Potential on a Spatial Grid of{dimension_number} Points")
+
+
     display_graph = True
     if display_graph:
         plt.show()
     else:
-        plt.savefig("equation_of_state_plot.png")
+        plt.savefig("SinusoidalPotential.png")
+        plt.close()
 
 

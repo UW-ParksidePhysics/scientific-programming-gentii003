@@ -1,3 +1,7 @@
+"""
+uses scripy constants to convert atomic to gigapascal
+"""
+
 from scipy.constants import physical_constants
 import numpy as np
 

@@ -1,3 +1,7 @@
+"""
+Calculates mean, max, min, and standard deviation of data given
+"""
+
 from scipy.stats import describe
 import numpy as np
 

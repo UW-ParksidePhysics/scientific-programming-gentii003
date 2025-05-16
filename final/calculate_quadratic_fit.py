@@ -1,3 +1,8 @@
+"""
+uses data from said file in code
+, separates files into columns and fit polynomial quadratic equation
+"""
+
 import numpy as np
 
 def calculate_quadratic_fit(data):
