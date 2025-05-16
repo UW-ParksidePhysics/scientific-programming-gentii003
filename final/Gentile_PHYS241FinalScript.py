@@ -1,5 +1,5 @@
 """
-Equation of State Plotter
+Equation of State
 
 This script reads volume and energy data, converts the units,
 fits a quadratic equation, calculates the bulk modulus(I did not get it to work), and plots the result.
