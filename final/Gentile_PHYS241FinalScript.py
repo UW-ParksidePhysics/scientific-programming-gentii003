@@ -10,7 +10,7 @@ computes:
 - Annotated plot with symmetry, chemical symbol, bulk modulus, and equilibrium volume
 - Optional display or PNG export via `display_graph`
 
-Set `display_graph = True` to show the plot, or `False` to save it as a PNG.
+
 """
 __author__ = 'Sophia Gentile'
 
