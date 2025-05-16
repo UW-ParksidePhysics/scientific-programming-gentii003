@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from equations_of_state import fit_equation_of_state
 from scipy.constants import physical_constants
 
+
 def parse_file_name(filename):
     parts = filename.split('.')
     chemical_symbol = parts[0]
@@ -64,17 +65,18 @@ def convert_units(value, from_units, to_units):
 
 
 if __name__ == "__main__":
-
+    #parse file
     file_name = 'ag.Fm-3m.GGA-PBE'
     chemical_symbol, crystal_symbol, density_function = parse_file_name(file_name)
-    #print("=== File Metadata ===")
     print(f'chemical_symbol: {chemical_symbol}')
     print(f'crystal_symbol: {crystal_symbol}')
     print(f'density_function: {density_function}')
 
+    #read data
     data = read_file('ag.Fm-3m.GGA-PBE')
     print(f'{data=}, shape={data.shape}')
 
+    #calculate bivariate statistics
     results = calculate_bivariate_statistics(data)
 
     stats = calculate_bivariate_statistics(data)
@@ -85,6 +87,7 @@ if __name__ == "__main__":
     print("min(y)", results[4])
     print("max(y)", results[5])
 
+     #Quadratic fit
     x_values = np.linspace(-2, 2, 5)
     y_values = 1 + 2 * x_values + 3 * x_values ** 2
     coefficients = calculate_quadratic_fit(data)
@@ -92,21 +95,55 @@ if __name__ == "__main__":
     #data = [np.linspace(-1, 1), np.linspace(-1, 1) ** 2]
     print(f"Quadratic coefficients:, {coefficients}\n")
 
+    #fit_eos
     fit_eos = fit_equation_of_state(data[0], data[1], coefficients, 'murnaghan',90)
     print(fit_eos)
 
     #def fit_equation_of_state(volumes, energies, quadratic_coefficients, equation_of_state='vinet',
                               #number_of_points=50):
+    #convert units
 
-    v = convert_units(1, "cubic_bohr/atom", "cubic_angstrom/atom")
-    e = convert_units(1, "rydberg/atom", "electron_volt/atom")
+    volume = convert_units([0], "cubic_bohr/atom", "cubic_angstrom/atom")
+    energy = convert_units([1], "rydberg/atom", "electron_volt/atom")
     b = convert_units(1, "rydberg/cubic_bohr", "gigapascal")
 
-    print(f"1 cubic bohr/atom = {v} cubic angstroms/atom")
-    print(f"1 rydberg/atom = {e} electron volts/atom")
-    print(f"1 rydberg/cubic bohr = {b} gigapascals")
 
-    plt.plot()
+    print("1 cubic bohr/atom =", convert_units(1, "cubic_bohr/atom", "cubic_angstrom/atom"), "cubic angstroms/atom")
+    print("1 rydberg/atom =", convert_units(1, "rydberg/atom", "electron_volt/atom"), "electron volts/atom")
+    print("1 rydberg/cubic bohr =", convert_units(1, "rydberg/cubic_bohr", "gigapascal"), "GPa")
+
+    #print(f"1 cubic bohr/atom = {volume} cubic angstroms/atom")
+    #print(f"1 rydberg/atom = {energy} electron volts/atom")
+    #print(f"1 rydberg/cubic bohr = {b} gigapascals")
+
+
+    #plot units
+    volume = convert_units(data[0], "cubic_bohr/atom", "cubic_angstrom/atom")
+    energy = convert_units(data[1], "rydberg/atom", "electron_volt/atom")
+
+    coeff = np.polyfit(volume, energy, 2)
+    volume_fit = np.linspace(min(volume), max(volume), 200)
+    energy_fit = np.polyval(coeff, volume_fit)
+
+    fig, ax = plt.subplots(figsize=(10, 8))
+    plt.plot(volume, energy, 'bo')
+    plt.plot(volume_fit, energy_fit, 'k-')
+
+    #padding
+    x_pad = 0.1 * (max(volume) - min(volume))
+    y_pad = 0.1 * (max(energy) - min(energy))
+    plt.xlim(min(volume) - x_pad, max(volume) + x_pad)
+    plt.ylim(min(energy) - y_pad, max(energy) + y_pad)
+    plt.xlabel(r'Volume $V$ (Å$^3$/atom)')
+    plt.ylabel(r'Energy $E$ (eV/atom)')
+
+    # annotate
+    plt.text(0.05,0.938,'Ag',transform=fig.transFigure,fontsize=26)
+    plt.text(0.53, 0.20, r'$Fm\overline{3}m$', transform=ax.transAxes, fontsize=15,fontstyle='italic')
+
     plt.show()
+
+
+
 
 

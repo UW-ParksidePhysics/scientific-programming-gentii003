@@ -1,8 +1,8 @@
-"""Calculate bivariate statistics of volume energies"""
-import numpy as np
 from scipy.stats import describe
 
+
 def calculate_bivariate_statistics(data):
+
     """
     Calculate bivariate statistics of ag
     """
@@ -16,5 +16,3 @@ def calculate_bivariate_statistics(data):
         min(x),max(x),
         min(y),max(y),
     ]
-if __name__ == '__main__':
-    results = calculate_bivariate_statistics(data)
